@@ -1,5 +1,9 @@
 # blutter-windows
 
+![CI](https://github.com/luotianyiismywife/blutter-windows/actions/workflows/build.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Windows%20x64-blue)
+
 Windows build support and (planned) precompiled binaries for [worawit/blutter](https://github.com/worawit/blutter) — the Flutter/Dart AOT snapshot reverse engineering tool.
 
 Upstream blutter targets Android (arm64) on Linux/macOS. This repository makes it build & run **on Windows, against Windows desktop Flutter apps** (`data/app.so` + `flutter_windows.dll`).
@@ -46,6 +50,15 @@ Notes:
 - [ ] GitHub Actions matrix builds (Dart 3.x LTS versions × x64) with precompiled `blutter_*.exe` releases
 - [ ] `flutter_windows.dll` version auto-detection on Windows (upstream only parses ELF `libflutter.so`)
 - [ ] Upstream PRs for patches #2–#4
+- [ ] One-click usage docs for common targets (Flutter Windows desktop apps)
+
+## Releases
+
+| Release | Dart VM | Compressed pointers | Artifact |
+|---------|---------|--------------------|----------|
+| v0.1.0 (planned) | 3.3.4 | no | `blutter_dartvm3.3.4_windows_x64_no-compressed-ptrs_no-analysis.exe` + ICU/capstone DLLs |
+
+> The exe is statically bound to one Dart VM configuration — a new Dart version (or a different pointer-compression setting) needs a separate build. The Actions workflow builds on demand; version matrix releases will follow.
 
 ## License
 

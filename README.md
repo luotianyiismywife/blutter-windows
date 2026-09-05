@@ -56,7 +56,7 @@ Notes:
 
 | Release | Dart VM | Compressed pointers | Artifact |
 |---------|---------|--------------------|----------|
-| v0.1.0 (planned) | 3.3.4 | no | `blutter_dartvm3.3.4_windows_x64_no-compressed-ptrs_no-analysis.exe` + ICU/capstone DLLs |
+| [v0.1.0](https://github.com/luotianyiismywife/blutter-windows/releases/tag/v0.1.0) | 3.3.4 | no | `blutter_dartvm3.3.4_windows_x64_no-compressed-ptrs_no-analysis.exe` + ICU/capstone DLLs |
 
 > The exe is statically bound to one Dart VM configuration — a new Dart version (or a different pointer-compression setting) needs a separate build. The Actions workflow builds on demand; version matrix releases will follow.
 

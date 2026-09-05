@@ -38,7 +38,7 @@ jobs:
           call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat" >nul
           set SUFFIX=_windows_x64
           if "${{ inputs.compressed_ptrs }}"=="false" set SUFFIX=%SUFFIX%_no-compressed-ptrs
-          python blutter.py --dart-version ${{ inputs.dart_version }}%SUFFIX% --no-analysis --rebuild NUL build_out || exit 1
+          python blutter.py --dart-version ${{ inputs.dart_version }}%SUFFIX% --no-analysis --build-only NUL build_out || exit 1
 
       - name: Collect artifacts
         shell: pwsh

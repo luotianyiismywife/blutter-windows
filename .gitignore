@@ -1,0 +1,15 @@
+# build artifacts
+build/
+bin/
+external/
+packages/
+dartsdk/
+blutter_out/
+__pycache__/
+*.pyc
+
+# reverse engineering materials must never be committed
+*.so
+*.dll
+!external-placeholder
+app_copy.so
